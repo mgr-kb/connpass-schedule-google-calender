@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import VueRouter, { RouterMode, RouterOptions } from "vue-router";
 import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
@@ -25,6 +25,6 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes
-});
+} as RouterOptions);
 
 export default router;
