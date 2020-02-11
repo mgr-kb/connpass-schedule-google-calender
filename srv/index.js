@@ -4,15 +4,13 @@ import axios from "axios";
 export default (app, http) => {
   app.use(express.json());
 
-  app.get("/foo", (req, res) => {
-    console.log("きたよfoo");
-    res.json({ msg: "foo" });
-  });
   app.get("/event", (req, res) => {
     (async () => {
+      console.log(req.url);
       const data = await axios
-        .get("https://connpass.com/api/v1/event/?nickname=mgr")
+        .get("https://connpass.com/api/v1" + req.url)
         .then(response => {
+          console.log("ok");
           return response.data;
         })
         .catch(err => {

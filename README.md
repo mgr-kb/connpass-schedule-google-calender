@@ -1,4 +1,6 @@
 # connpass-schedule-google-calender
+connpass-apiから自身の参加予定のイベントを取得して、googleカレンダーに登録できるようにする
+
 
 ## Project setup
 ```
